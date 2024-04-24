@@ -96,10 +96,10 @@ April 2024~\\[2cm]
 \section{Methodology}
     When simulating a chaotic system, it is important to use a numerical method that is very precise and to
     use a small enough time step to ensure that the system is accurately represented. The Euler method is
-    a simple method that can be used to simulate the system, but it is not very accurate. The Runge-Kutta
+    a simple method that can be used to simulate the system, but it is not very accurate as the order of eror is $delta t **2$. The Runge-Kutta
     method is a more accurate method that can be used to simulate the system, and although it may be more
     computationally expensive, the Runge-Kutta method is a good choice for simulating a chaotic system, 
-    specifically RK4\cite{Strogatz2000}. In this project, RK4 was used to calculate the steps of angular velocity
+    specifically RK4\cite{Strogatz2000}.It strikes the perfect balance between computational time and minimizing errors but since this a family of RK higher orders may be used. In this project, RK4 was used to calculate the steps of angular velocity
     using the equation of motion for the forced, damped pendulum, and Euler's method was used to calculate the
     angle from the angular velocity, as the angular velocities are calculated discretely, there is no way to take
     a half step which is required for RK4. The equation of motion for this system is given by \cite{PhysRevE.53.1579}
